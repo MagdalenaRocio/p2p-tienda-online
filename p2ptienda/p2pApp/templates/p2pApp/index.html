@@ -1,0 +1,80 @@
+{% load static %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Tu Tienda de Relax</title>
+	<meta charset="UTF-8">
+	<meta name="description" content=" Divisima">
+	<meta name="keywords" content="divisima, eCommerce, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon" />
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+	<!-- Hojas de estilo -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'css/flaticon.css'%}" />
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'css/jquery-ui.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'css/animate.css'%}" />
+	<link rel="stylesheet" href="{% static 'css/style.css'%}" />
+	<script src="https://kit.fontawesome.com/94d365e8cc.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Cabezera -->
+	<header class="header-section">
+		<nav class="main-navbar">
+			<div class="container">
+				<!-- menu de navegacion -->
+				<ul class="main-menu">
+					<li>
+						<p class="prueba">TU TIENDA DE RELAX</p>
+					</li>
+					<li><a href="{% url 'p2pApp:consultar_producto' %}" >Inicio</a></li>
+					<li><a href="{% url 'p2pApp:mujer' %}" >Mujer</a></li>
+					<li><a href="{% url 'p2pApp:hombre' %}">Hombre</a></li>
+					<li class="up-item">
+							<i class="fas fa-shopping-cart"></i>
+						<a href="{% url 'p2pApp:consultar_carrito' %}">Carrito de Compra</a>
+					</li>
+					<li>
+						<a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-power -off"></i>Logout</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- Fin de Cabezera -->
+
+	<!-- Block contenido -->
+	{% block content%}
+	{% endblock content%}
+
+	<!-- endblock contenido -->
+
+	<!-- Footer  -->
+
+
+
+	</section>
+	<!-- Footer fin -->
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
+	<script src="{% static 'js/bootstrap.min.js'%}"></script>
+	<script src="{% static 'js/jquery.slicknav.min.js'%}"></script>
+	<script src="{% static 'js/owl.carousel.min.js'%}"></script>
+	<script src="{% static 'js/jquery.nicescroll.min.js'%}"></script>
+	<script src="{% static 'js/jquery.zoom.min.js'%}"></script>
+	<script src="{% static 'js/jquery-ui.min.js'%}"></script>
+	<script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>

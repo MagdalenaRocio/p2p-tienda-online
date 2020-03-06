@@ -1,0 +1,27 @@
+{% extends 'p2pApp/index.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block content%}
+<section class="top-letest-product-section ">
+    <div class="section-title">
+        
+    </div>
+    <div class="container productos row row-cols-1 row-cols-md-3">
+            {% for p in mujer  %}
+            <div class="card  proitems" style="width: 18rem;">
+                <img class="card-img-top" src="{{ p.producto_fields.url }}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{ p.nombre }}</h5>
+                  <h5 class="card-title">{{ p.precio }}</h5>
+                  <h6 class="card-title">{{ p.fkCategoria }}</h6>
+                  <p class="card-text">{{ p.descripcion }}</p>
+                  <p class="Card">{{ p.id }}</p>
+                  <a href="{% url 'p2pApp:cesta' p.id %}"class="fas fa-cart-arrow-down fa-2x"></a>
+                </div>
+            </div>
+            {% endfor %}
+        
+    </div>
+</section>
+{% endblock content%}

@@ -1,0 +1,25 @@
+{% extends 'p2pApp/index.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block content%}
+<section class="top-letest-product-section ">
+    <div class="section-title">
+        <h2>Tus productos</h2>
+    </div>
+    <div class="container productos ">
+            {% for c in p2pApp %}
+            <div class="card  proitems" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Nombre: {{ c.producto }}</h5>
+                  <h5 class="card-title">Cantidad: {{ c.cantidad }}</h5>
+                  <p class="Card">Cod. Identificador: {{ c.id }}</p>
+                  <a href="{% url 'p2pApp:eliminarCarrito' c.id %}" class="fas fa-trash-alt fa-2x"></a>
+                </div>
+            </div>
+            
+            {% endfor %}
+            <a href="{% url 'p2pApp:PagarCarrito' %}"class="btn btn-primary">Pagar</a>
+    </div>
+</section>
+{% endblock content%}
