@@ -1,0 +1,147 @@
+
+html,
+body {
+	
+	font-family: 'Josefin Sans', sans-serif;
+	background: url("../img/static/img/massexy.jpg") top center no-repeat, url("../img/static/img/mosaic.png")  left top repeat;	
+	
+}
+
+.prueba{
+	color:rgb(180, 15, 15);
+	font-size: 50px;
+	padding-top: 50px;
+	margin-left: 9em;
+	font-family: 'Petit Formal Script', cursive;
+	font-weight: bold;
+	text-shadow: 2px 0 0 #470909, -2px 0 0 #b67070;
+	
+}
+
+.slicknav_menu {
+	display: none;
+}
+
+.main-menu li {
+	display: inline-block;
+	position: relative;
+}
+
+.main-menu li a {
+	display: inline-block;
+	font-size: 25px;
+	color: #ffffff;
+	margin-right: 50px;
+	line-height: 1;
+	padding: 17px 0;
+	position: relative;
+}
+
+
+
+.map {
+	position: absolute;
+	width: calc(50% - 15px);
+	height: 100%;
+	right: 0;
+	top: 0;
+	background: #ddd;
+}
+
+/* ESTILO DEL EQUIPO P2P */
+
+.productos{
+	display: flex;	
+}
+
+.proitems{
+	margin: 20px;
+	border: 1px solid black;
+	justify-content: center;
+}
+
+.cantidadCarrito{
+	margin:10em;
+	text-align: center;
+	border: 1px solid rgb(109, 5, 5);
+	width: 300px;
+	padding: 20px;
+	background-color: rgb(37, 37, 37);
+}
+
+input#cantidad.form-control{
+	width: 100px;
+	margin:auto;
+}
+
+.productos{
+	display:flex;
+	justify-content: space-between;
+	margin-left: 300px;
+	padding: 10px;
+}
+
+.fas{
+	color: rgb(150, 17, 17);
+}
+
+.btn{
+	background-color: rgb(150, 17, 17);
+	color: white;
+	font-size: 17px;
+	width: 100px;
+}
+
+.form-group{
+	color: white;
+	
+	font-size: 20px;
+}
+
+.alignForm{
+	align-items:center ;
+}
+
+.card-body{
+	background-color:rgba(179, 179, 179, 0.1);
+}
+
+
+.nuestroProducto{
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 3px 0 0 #202020, 3px 0 0 #464646;
+}
+
+.btn-success{
+    width: 150px;
+    font-size: 16px;
+}
+
+.login-form{
+    margin:13em;
+    text-align: center;
+    width: 600px;
+    padding: 20px;
+    box-shadow: ;
+}
+
+.parraf{
+    font-size: 28px;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.btn-primary{
+width: 200px;
+height: 50px;
+text-align: center;
+font-size: 30px;
+margin-top: 200px;
+}
+.container {
+	margin-left: 200px;
+}

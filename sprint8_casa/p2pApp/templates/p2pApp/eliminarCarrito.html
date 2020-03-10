@@ -1,0 +1,14 @@
+{% extends 'p2pApp/index.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+
+{% block body %}
+<form method="POST">
+  {% csrf_token %}
+  <h2>¿Desea elminar el registro {{ Carrito.producto }}?</h2>
+    <button type = "submit">Eliminar</button>
+    <a href="{% url 'p2pApP:consultar_carrito' %}">Cancelar</a>
+</form>
+
+{% endblock body %}
