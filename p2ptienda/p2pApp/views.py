@@ -30,11 +30,13 @@ class Carrazo(CreateView):
     success_url = reverse_lazy('p2pApp:consultar_producto')
 
     def form_valid(self,form):
-        self.object = form.save(commit=False)
+        self.object = form.save(commit=False)#guardo del formulario
         producto = Producto.objects.get(pk = self.kwargs.get('pk',None))
         self.object.producto = producto
         usuario = User.objects.get(pk = 1)
         self.object.user = usuario
+        self.object.subtotal = self.object.cantidad
+
 
         self.object.save()
         return super(Carrazo,self).form_valid(form)
